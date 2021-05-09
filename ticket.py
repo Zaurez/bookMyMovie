@@ -37,16 +37,16 @@ class ticket():
             else:
                 
                 #hall distribution in Front and Back Row
-                if database.hall_row % 2 ==0:
-                    if ticket.chosen_row >= ticket.back_row_count:
-                        ticket.ticket_price = 10
-                    else:
-                        ticket.ticket_price = 8
+#             if database.hall_row % 2 ==0:
+                if ticket.chosen_row > ticket.back_row_count:
+                    ticket.ticket_price = 10
                 else:
-                    if ticket.chosen_row >= ticket.back_row_count:
-                        ticket.ticket_price = 10
-                    else:
-                        ticket.ticket_price = 8
+                    ticket.ticket_price = 8
+#             else:
+#                 if ticket.chosen_row >= ticket.back_row_count:
+#                     ticket.ticket_price = 10
+#                 else:
+#                     ticket.ticket_price = 8
 
     def check_valid_seat(self):
             #checking if seat is valid for given hall
